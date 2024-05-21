@@ -1,4 +1,4 @@
-function [best_l] = resolution_steffan(Ny,Nt,T,dt,dy,ks,kl,temperature_fusion,Nombre_de_simulation)
+function [best_l] = resolution_stefan(Ny,Nt,T,dt,dy,ks,kl,temperature_fusion,Nombre_de_simulation)
     V_solide = randi([0 40],1,1);
     V_liquide = randi([60 100],1,1);
 

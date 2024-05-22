@@ -22,4 +22,4 @@ dy = Longueur/100;%nombre de point de mesure
 Ny = Longueur/dy;%taille d'un échantillon d'espace
 
 Nombre_de_simulation = 10;%nombre de simulation pour trouver la chaleur latente
-best_l= resolution_steffan(Ny,Nt,T,dt,dy,ks,kl,temperature_fusion,Nombre_de_simulation);%meilleur coefficient de chaleur latente obtenu
+best_l= resolution_stefan(Ny,Nt,T,dt,dy,ks,kl,temperature_fusion,Nombre_de_simulation);%meilleur coefficient de chaleur latente obtenu

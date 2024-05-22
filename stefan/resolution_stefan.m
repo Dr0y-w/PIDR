@@ -10,7 +10,7 @@ function [best_l] = resolution_stefan(Ny,Nt,T,dt,dy,ks,kl,temperature_fusion,Nom
     b(1) = b0;
 
 
-    for t = 2:T
+    for t = 2:Nt
         %schema pour bn+1
         b(t) = b(t-1) + (dt/chaleur_latente_t)*((-kl/(1-b(t-1)))*(theta_liquide_t(1)-theta_liquide_t(1+1))/dy + (ks/(b(t-1)))*(theta_solide_t(Ny)-theta_solide_t(Ny-1))/dy);
         %schema pour theta_liquide et theta_solide
@@ -30,7 +30,7 @@ function [best_l] = resolution_stefan(Ny,Nt,T,dt,dy,ks,kl,temperature_fusion,Nom
         b(1) = b0;
 
 
-        for t = 2:T
+        for t = 2:Nt
             %schema pour bn+1
             b(t) = b(t-1) + (dt/chaleur_latente)*((-kl/(1-b(t-1)))*(theta_liquide(1)-theta_liquide(1+1))/dy + (ks/(b(t-1)))*(theta_solide(Ny)-theta_solide(Ny-1))/dy);
             %schema pour theta_liquide et theta_solide
